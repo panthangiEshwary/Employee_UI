@@ -1,0 +1,81 @@
+<div class="page">
+  <div class="portal-card">
+
+    <h1>Admin Login</h1>
+    <p class="subtitle">Restricted Access</p>
+
+    <input
+      type="text"
+      placeholder="Admin Username"
+      [(ngModel)]="username"
+    />
+
+    <input
+      type="password"
+      placeholder="Admin Password"
+      [(ngModel)]="password"
+    />
+
+    <!-- LOGIN + FORGOT SIDE BY SIDE -->
+<div class="action-row">
+  <button
+    class="primary-btn"
+    type="button"
+    (click)="loginAsAdmin()">
+    Login as Admin
+  </button>
+
+  <button
+    type="button"
+    class="forgot-link"
+    (click)="forgotPassword()">
+    Forgot password?
+  </button>
+</div>
+
+    <!-- BACK BUTTON -->
+    <div class="back-wrapper">
+      <button
+        class="back-link"
+        type="button"
+        (click)="goBack()">
+        ← Back
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<!-- 🔹 FORGOT PASSWORD MODAL -->
+<div class="modal-overlay" *ngIf="showForgotModal">
+  <div class="modal-card">
+
+    <h3>Reset Admin Password</h3>
+
+    <input
+      type="email"
+      placeholder="Registered Admin Email"
+      [(ngModel)]="resetEmail"
+    />
+
+    <input
+      type="password"
+      placeholder="New Password"
+      [(ngModel)]="newPassword"
+    />
+
+    <input
+      type="password"
+      placeholder="Confirm Password"
+      [(ngModel)]="confirmPassword"
+    />
+
+    <p class="error" *ngIf="errorMsg">{{ errorMsg }}</p>
+
+    <div class="modal-actions">
+      <button class="primary-btn" (click)="resetPassword()">Save</button>
+      <button class="cancel-btn" (click)="closeModal()">Cancel</button>
+    </div>
+
+  </div>
+</div>

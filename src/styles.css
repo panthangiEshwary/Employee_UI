@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Microsoft Copilot-style layered background */
+  background:
+    radial-gradient(
+      1200px circle at 15% 20%,
+      rgba(91, 123, 255, 0.45),
+      transparent 40%
+    ),
+    radial-gradient(
+      1000px circle at 85% 30%,
+      rgba(168, 85, 247, 0.35),
+      transparent 45%
+    ),
+    radial-gradient(
+      900px circle at 50% 85%,
+      rgba(0, 183, 255, 0.25),
+      transparent 40%
+    ),
+    linear-gradient(135deg, #0b1220, #111827);
+
+  background-attachment: fixed;
+}

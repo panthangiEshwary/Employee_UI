@@ -1,0 +1,47 @@
+<div class="page">
+  <div class="portal-card">
+
+    <h1>Employee Portal</h1>
+    <p class="subtitle">HRMS Access Management</p>
+
+    <form (ngSubmit)="onLogin()">
+
+      <input
+        type="text"
+        placeholder="Username or Email"
+        [(ngModel)]="username"
+        name="username"
+        required
+      />
+
+      <input
+        type="password"
+        placeholder="Password"
+        [(ngModel)]="password"
+        name="password"
+        required
+      />
+
+<!-- LOGIN + FORGOT ROW -->
+<div class="action-row">
+  <button type="submit" class="primary-btn">
+    Login
+  </button>
+
+  <button
+    type="button"
+    class="forgot-link"
+    (click)="forgotPassword()">
+    Forgot password?
+  </button>
+</div>
+
+    </form>
+
+    <!-- BACK BUTTON -->
+    <button class="back-btn-bottom" type="button" (click)="goBack()">
+      ← Back
+    </button>
+
+  </div>
+</div>

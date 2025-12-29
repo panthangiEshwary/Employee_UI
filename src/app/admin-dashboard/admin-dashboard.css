@@ -1,0 +1,93 @@
+.admin-page {
+  min-height: 100vh;
+  padding: 24px;
+  background: #020617;
+  color: #e5e7eb;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  margin-bottom: 16px;
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+select,
+input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background: #020617;
+  color: #fff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #334155;
+}
+
+th {
+  text-align: left;
+  color: #94a3b8;
+}
+
+button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+button.danger {
+  background: #dc2626;
+  color: #fff;
+}
+
+.logout {
+  margin-top: 20px;
+  background: #2563eb;
+  color: #fff;
+}
+
+.forgot-link {
+  margin-top: 10px;
+  background: none;
+  border: none;
+  color: #93c5fd;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+  color: #bfdbfe;
+}
+
+.logout-wrapper {
+  margin-top: 30px;
+}
+
+.logout-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.logout-btn:hover {
+  background: #1d4ed8;
+}

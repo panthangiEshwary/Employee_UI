@@ -1,0 +1,87 @@
+<div class="page">
+  <div class="dashboard">
+
+    <h2>Employee Dashboard</h2>
+
+    <!-- User Info -->
+    <div class="user-info">
+      <div><span>Name</span> {{ user.name }}</div>
+      <div><span>Email</span> {{ user.email }}</div>
+    </div>
+
+    <!-- Department -->
+    <label class="mt">Department</label>
+    <select [(ngModel)]="selectedDepartment">
+      <option value="">Select Department</option>
+      <option *ngFor="let dept of departments" [value]="dept">
+        {{ dept }}
+      </option>
+    </select>
+
+    <!-- Month & Year -->
+    <div class="row mt">
+      <div class="col">
+        <label>Month</label>
+        <select
+          [(ngModel)]="selectedMonth"
+          (change)="onMonthOrYearChange()"
+          [disabled]="!selectedDepartment"
+        >
+          <option value="">Select Month</option>
+          <option *ngFor="let m of months" [value]="m.value">
+            {{ m.label }}
+          </option>
+        </select>
+      </div>
+
+      <div class="col">
+        <label>Year</label>
+        <select
+          [(ngModel)]="selectedYear"
+          (change)="onMonthOrYearChange()"
+          [disabled]="!selectedDepartment"
+        >
+          <option value="">Select Year</option>
+          <option *ngFor="let y of years" [value]="y">
+            {{ y }}
+          </option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Days in Month -->
+    <label class="mt">Days in Selected Month</label>
+    <input class="readonly" [value]="daysInMonth" readonly />
+
+    <!-- Working Days -->
+    <label class="mt">Working Days</label>
+    <input
+      type="number"
+      min="1"
+      [max]="daysInMonth"
+      [(ngModel)]="workingDays"
+      [disabled]="!daysInMonth"
+      (input)="validateWorkingDays()"
+      placeholder="Enter working days"
+    />
+
+    <small class="error" *ngIf="showError">
+      Working days cannot exceed {{ daysInMonth }}
+    </small>
+
+   <div class="btn-center">
+  <button
+    class="submit-btn"
+    (click)="submit()"
+    [disabled]="!isFormValid()"
+  >
+    Submit
+  </button>
+</div>
+
+
+    <!-- Logout -->
+    <button class="logout-btn" (click)="logout()">Logout</button>
+
+  </div>
+</div>

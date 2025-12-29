@@ -1,0 +1,101 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: 
+    linear-gradient(
+      rgba(2, 6, 23, 0.65),
+      rgba(2, 6, 23, 0.75)
+    ),
+    url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+
+/* Main card */
+.portal-card {
+  width: 380px;
+  padding: 36px;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+
+  color: white;
+}
+
+/* Title */
+.portal-card h1 {
+  margin: 0;
+  text-align: center;
+
+  font-size: 32px;          /* Bigger title */
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* Subtitle */
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+
+  opacity: 0.75;
+  margin-top: 8px;
+  margin-bottom: 34px;
+}
+
+/* Menu */
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 14px 18px;
+  margin-bottom: 14px;
+
+  border-radius: 14px;
+  cursor: pointer;
+
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  font-size: 15px;
+  font-weight: 500;
+
+  transition: all 0.25s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.26);
+}
+
+.arrow {
+  opacity: 0.55;
+}
+
+/* Subtle Microsoft-style color hints */
+.login:hover {
+  box-shadow: inset 4px 0 0 #2563eb;
+}
+
+.register:hover {
+  box-shadow: inset 4px 0 0 #16a34a;
+}
+
+.admin:hover {
+  box-shadow: inset 4px 0 0 #7c3aed;
+}

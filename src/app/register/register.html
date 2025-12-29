@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="card">
+    <h2>Employee Registration</h2>
+ 
+    <input
+      type="text"
+      placeholder="First Name"
+      [(ngModel)]="firstName"
+      (input)="updateFullName()"
+    />
+
+    <input
+      type="text"
+      placeholder="Last Name"
+      [(ngModel)]="lastName"
+      (input)="updateFullName()"
+    />
+
+    <input
+      type="text"
+      placeholder="Full Name"
+      [(ngModel)]="fullName"
+      readonly
+    />
+
+    <input type="email" placeholder="Email" />
+    <input type="password" placeholder="Password" />
+    <input type="password" placeholder="Confirm Password" />
+
+  <button class="submit">Submit</button>
+
+<div class="back-wrapper">
+  <button class="back-link" type="button" (click)="goBack()">
+    ← Back
+  </button>
+</div>
+</div>
